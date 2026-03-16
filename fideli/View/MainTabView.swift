@@ -1,18 +1,27 @@
-//
-//  MainTabView.swift
-//  fideli
-//
-//  Created by Wijayasuntharam Pravin on 12/03/2026.
-//
-
 import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            MyCardsView()
+                .tabItem {
+                    Label("Mes cartes", systemImage: "creditcard.fill")
+                }
+            
+            AddCardView()
+                .tabItem {
+                    Label("Ajouter", systemImage: "plus.circle.fill")
+                }
+            
+            AccountView()
+                .tabItem {
+                    Label("Mon compte", systemImage: "person.crop.circle.fill")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Label("Réglages", systemImage: "gearshape.fill")
+                }
+        }
     }
-}
-
-#Preview {
-    MainTabView()
 }

@@ -6,8 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		919CFEB52F636E3D0019CF0B /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 919CFEB42F636E3D0019CF0B /* CodeScanner */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		910364022F63532400736D0F /* fideli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fideli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		919CFEB62F636E750019CF0B /* fideli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fideli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919CFEB52F636E3D0019CF0B /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,16 +38,8 @@
 			isa = PBXGroup;
 			children = (
 				910364042F63532400736D0F /* fideli */,
-				910364032F63532400736D0F /* Products */,
+				919CFEB62F636E750019CF0B /* fideli.app */,
 			);
-			sourceTree = "<group>";
-		};
-		910364032F63532400736D0F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				910364022F63532400736D0F /* fideli.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,9 +62,10 @@
 			);
 			name = fideli;
 			packageProductDependencies = (
+				919CFEB42F636E3D0019CF0B /* CodeScanner */,
 			);
 			productName = fideli;
-			productReference = 910364022F63532400736D0F /* fideli.app */;
+			productReference = 919CFEB62F636E750019CF0B /* fideli.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -94,8 +92,11 @@
 			);
 			mainGroup = 910363F92F63532400736D0F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				919CFEB32F636E3D0019CF0B /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 910364032F63532400736D0F /* Products */;
+			productRefGroup = 910363F92F63532400736D0F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -253,6 +254,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Nous avons besoin de la caméra pour scanner vos cartes de fidélité.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +286,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Nous avons besoin de la caméra pour scanner vos cartes de fidélité.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +331,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		919CFEB32F636E3D0019CF0B /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		919CFEB42F636E3D0019CF0B /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 919CFEB32F636E3D0019CF0B /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 910363FA2F63532400736D0F /* Project object */;
 }
